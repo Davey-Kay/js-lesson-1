@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson 1</title>
+</head>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        .blue {
+            color: cyan;
+        } 
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .orange {
+            color: orange;
+        }
+
+        .small {
+            font-size: 1em;
+        }
+
+        .big {
+            font-size: 3em;
+        }
+    </style>
+
+<body>
+
+    <p id="firstText" class="blue small">First text!</p>
+    <p id="secondText" class="blue small">Second text!</p>
+    <p id="thirdText" class="blue small">Third text!</p>
+
+    <button onclick="changeColourAndSize('firstText', 'red')">Change first text</button>
+    <button onclick="changeColourAndSize('secondText', 'green')">Change second text</button>
+    <button onclick="changeColourAndSize('thirdText', 'orange')">Change third text</button>
+
+</body>
+<script>
+
+    function changeColourAndSize(elementID, colour) {
+        var textElement = document.getElementById(elementID)
+        textElement.classList.remove("blue", "small")
+        textElement.classList.add(colour, "big")
+    }
+
+</script>
+</html>
